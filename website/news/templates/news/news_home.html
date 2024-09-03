@@ -6,7 +6,19 @@
 <div class="container mt-4">
     <h1 class="display-4">Новости</h1>
     <p class="lead">Добро пожаловать в раздел новостей.</p>
-    {{ news }}
+    {% for news in news %}
+
+    <div>
+       <h3>{{ news.title }}</h3>
+       <p>{{ news.short_description }}</p>
+       <p>{{ news.text }}</p>
+       <p>{{ news.pub_date }}</p>
+       <p>{{ news.name_user }}</p>
+
+    </div>
+
+    {% endfor %}
+
     <!-- Add your news content here -->
 </div>
 {% endblock %}
