@@ -9,6 +9,14 @@ class News_post(models.Model):
     name_user = models.CharField('Имя пользователя', max_length=50)
 
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
+
 
 
 # Create your models here.

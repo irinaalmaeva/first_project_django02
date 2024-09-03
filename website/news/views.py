@@ -3,7 +3,8 @@ from .models import News_post
 
 
 def news_home(request):
-    return render(request, 'news/news_home.html')
+    news = News_post.objects.all()
+    return render(request, 'news/news_home.html', {'news': news})
 
 
 
